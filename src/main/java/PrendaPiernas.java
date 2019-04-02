@@ -1,16 +1,25 @@
 public class PrendaPiernas extends Prenda {
-
-    private String material;
-    private int color;
-    private int tempertura;
+    private static subTipo PIERNAS;
     private String nombre;
+    private double tempMin;
+    private double tempMax;
+    private Color color1;
+    private Color color2;
+    private String material;
 
-    public PrendaPiernas(String material, int tempertura, int color, String nombre){
+    public PrendaPiernas(String material, double temp1, double temp2, Color color1, Color color2, String nombre){
         this.material = material;
-        this.tempertura = tempertura;
-        this.color = color;
+        this.tempMin = temp1;
+        this.tempMax = temp2;
         this.nombre = nombre;
+        this.color1 = color1;
+        this.color2 = color2;
+
     };
+
+    public PrendaPiernas(){
+
+    }
 
     public String EsDe(){
         return this.material;
@@ -20,11 +29,8 @@ public class PrendaPiernas extends Prenda {
         return this.nombre;
     }
 
-    public int DeColor(){
-        return this.color;
-    }
     public static void main(String[] args) {
-        PrendaPiernas prenda = new PrendaPiernas("Jean", 25, 0, "Pantalon de Jean");
-        System.out.println("La prenda es de " + prenda.EsDe() + " de color " + prenda.DeColor() + " se llama " + prenda.NombrePrenda() );
+    //    PrendaPiernas prenda = new PrendaPierna();
+    //    System.out.println("La prenda es de ");
     }
 }
