@@ -9,24 +9,54 @@ public class Prenda {
     private String nombre;
     private double tempMin;
     private double tempMax;
-    private Color color1;
-    private Color color2;
+    private String color1;
+    private String color2;
     private String material;
 
-    public Prenda(String nombre){
+    public Prenda(String subtipo, String material, String temp1, String temp2, String color1, String color2, String nombre){
+        this.subtipo = subTipo.valueOf(subtipo);
+        this.material = material;
+        this.tempMin =  Double.parseDouble(temp1);
+        this.tempMax = Double.parseDouble(temp2);
         this.nombre = nombre;
-    }
+        this.color1 = color1;
+        this.color2 = color2;
+
+    };
 
     public Prenda(){
 
     };
+    public Prenda.subTipo getSubTipo() {
+        subTipo subtipo = this.subtipo;
+        return subtipo;
+    }
 
-    public String NombrePrenda(){
+    public double getTempMin() {
+        return tempMin;
+    }
+
+    public double getTempMax() {
+        return tempMax;
+    }
+
+    public String getNombre() {
         return this.nombre;
     }
 
-    public static void main(String[] args) {
-        Prenda prenda = new Prenda("Jean");
-        System.out.println("La prenda es un " + prenda.nombre);
+    public String getColor1() {
+        return color1;
+    }
+
+    public String getColor2() {
+        return color2;
+    }
+
+    public String getMaterial(){
+        return material;
+    }
+
+    public String NombrePrenda(){
+        return this.nombre;
     }
 }

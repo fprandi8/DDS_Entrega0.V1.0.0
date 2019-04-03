@@ -1,13 +1,14 @@
 public class PrendaPiernas extends Prenda {
-    private static subTipo PIERNAS;
+    private static Prenda.subTipo PIERNAS;
     private String nombre;
     private double tempMin;
     private double tempMax;
-    private Color color1;
-    private Color color2;
+    private String color1;
+    private String color2;
     private String material;
 
-    public PrendaPiernas(String material, double temp1, double temp2, Color color1, Color color2, String nombre){
+    public PrendaPiernas(String material, double temp1, double temp2, String color1, String color2, String nombre){
+        super();
         this.material = material;
         this.tempMin = temp1;
         this.tempMax = temp2;
@@ -16,10 +17,6 @@ public class PrendaPiernas extends Prenda {
         this.color2 = color2;
 
     };
-
-    public PrendaPiernas(){
-
-    }
 
     public String EsDe(){
         return this.material;
@@ -30,7 +27,5 @@ public class PrendaPiernas extends Prenda {
     }
 
     public static void main(String[] args) {
-    //    PrendaPiernas prenda = new PrendaPierna();
-    //    System.out.println("La prenda es de ");
     }
 }
