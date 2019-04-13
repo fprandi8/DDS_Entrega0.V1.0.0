@@ -7,7 +7,7 @@ public class PlacardTest {
 
     @Test
     public void validarPlacardSugerencia(){
-
+cd
         String filePath = "/Users/macbookair/IdeaProjects/SugerenciaRopa/src/main/carga.txt";
         String fileName = "carga.txt";
 
