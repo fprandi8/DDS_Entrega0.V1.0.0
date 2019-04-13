@@ -56,7 +56,4 @@ public class Prenda {
         return material;
     }
 
-    public String NombrePrenda(){
-        return this.nombre;
-    }
 }

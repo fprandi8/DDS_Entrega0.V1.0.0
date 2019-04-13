@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
         String filePath = "/Users/macbookair/IdeaProjects/SugerenciaRopa/src/main/carga.txt";
         String fileName = "carga.txt";
+        Sugerencia unaSugerencia = new Sugerencia();
         Placard placard = new Placard();
-        List<Prenda> myRopa = new LinkedList<Prenda>();
         try (Scanner scanner = new Scanner(new File(filePath)).useDelimiter(";")) {
             while (scanner.hasNext()) {
 
@@ -31,13 +31,8 @@ public class Main {
                             fileName + "'" + "ex " + ex);
         }
 
-        try {
-            Prenda otraPrenda = placard.tomarUnaPrenda();
-            System.out.println("Nombre: " + otraPrenda.getNombre());
-            System.out.println("Subtipo: " + otraPrenda.getSubTipo());
+        unaSugerencia = placard.sugerirVestuario(24);
+        unaSugerencia.mostrarSugerencia();
 
-        } catch (NoSuchElementException ex) {
-            System.out.println("No hay elemento en la lista");
-        }
     }
 }

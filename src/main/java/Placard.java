@@ -14,9 +14,17 @@ public class Placard {
         this.ropa.add(ropa);
     }
 
-    public Prenda tomarUnaPrenda (){
-        return this.ropa.getFirst();
+    public Prenda tomarUnaPrenda (int i){
+
+        try {
+            return this.ropa.get(i);
+        }
+
+        catch (IndexOutOfBoundsException ex){
+            return null;
+        }
     }
+
 
     public Sugerencia sugerirVestuario (double temp){
         LinkedList<Prenda> listaSugerida = new LinkedList<>();
@@ -31,18 +39,22 @@ public class Placard {
                 switch (unaPrenda.getSubTipo()){
                     case PIERNAS:{
                         sugerencia.addPiernas(unaPrenda);
+                        break;
                     }
 
                     case TORSO:{
                         sugerencia.addTorso(unaPrenda);
+                        break;
                     }
 
                     case PIES:{
                         sugerencia.addPies(unaPrenda);
+                        break;
                     }
 
                     case ACCESORIO:{
                         sugerencia.addAccesorios(unaPrenda);
+                        break;
                     }
                 }
             }
