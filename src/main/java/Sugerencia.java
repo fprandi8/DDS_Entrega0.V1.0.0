@@ -26,6 +26,26 @@ public class Sugerencia {
         this.pies.add(pies);
     }
 
+    public void addAccesorios(Prenda accesorios){
+        this.accesorios.add(accesorios);
+    }
+
+    public LinkedList<Prenda> getTorso() {
+        return torso;
+    }
+
+    public LinkedList<Prenda> getPiernas() {
+        return piernas;
+    }
+
+    public LinkedList<Prenda> getAccesorios() {
+        return accesorios;
+    }
+
+    public LinkedList<Prenda> getPies() {
+        return pies;
+    }
+
     public void mostrarSugerencia(){
         ListIterator<Prenda> prendaListIterator = this.torso.listIterator();
         while (prendaListIterator.hasNext()){
@@ -52,44 +72,4 @@ public class Sugerencia {
         }
     }
 
-    public void addAccesorios(Prenda accesorios){
-        this.accesorios.add(accesorios);
-    }
-
-    public Prenda devolverTorsos(int i){
-        try {
-            return this.torso.get(i);
-        }
-
-        catch (IndexOutOfBoundsException ex){
-            return null;
-        }
-    }
-    public Prenda devolverPiernas(int i){
-        try {
-            return this.piernas.get(i);
-        }
-
-        catch (IndexOutOfBoundsException ex){
-            return null;
-        }
-    }
-    public Prenda devolverPies(int i){
-        try {
-            return this.pies.get(i);
-        }
-
-        catch (IndexOutOfBoundsException ex){
-            return null;
-        }
-    }
-    public Prenda devolverAccesorio(int i){
-        try {
-            return this.accesorios.get(i);
-        }
-
-        catch (IndexOutOfBoundsException ex){
-            return null;
-        }
-    }
 }
