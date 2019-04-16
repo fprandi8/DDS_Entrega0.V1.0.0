@@ -4,16 +4,17 @@ import java.util.Scanner;
 
 public class ParserPrenda {
 
-    private String path;
     private String name;
 
-    public ParserPrenda (String path, String filename){
-        this.path = path;
+    public ParserPrenda(String filename) {
         this.name = filename;
     }
 
-    public void GuardarPrendas (String criterio, Placard MiPlacard){
-        try (Scanner scanner = new Scanner(new File(this.path)).useDelimiter(criterio)){
+    public void GuardarPrendas(String criterio, Placard MiPlacard) {
+
+        String path = new File(this.name).getAbsolutePath();
+
+        try (Scanner scanner = new Scanner(new File(path)).useDelimiter(criterio)) {
             while (scanner.hasNext()) {
 
                 String token = scanner.next();

@@ -7,13 +7,12 @@ public class PlacardTest {
 
     @Test
     public void validarPlacardSugerencia(){
-cd
-        String filePath = "/Users/macbookair/IdeaProjects/SugerenciaRopa/src/main/carga.txt";
+
         String fileName = "carga.txt";
 
         Placard placardTest = new Placard();
 
-        ParserPrenda parserTest = new ParserPrenda(filePath, fileName);
+        ParserPrenda parserTest = new ParserPrenda(fileName);
 
         parserTest.GuardarPrendas(";", placardTest);
 
@@ -31,12 +30,11 @@ cd
     @Test
     public void validarPlacardFiltroPorTemp(){
 
-        String filePath = "/Users/macbookair/IdeaProjects/SugerenciaRopa/src/main/carga.txt";
         String fileName = "carga.txt";
 
         Placard placardTest = new Placard();
 
-        ParserPrenda parserTest = new ParserPrenda(filePath, fileName);
+        ParserPrenda parserTest = new ParserPrenda(fileName);
 
         parserTest.GuardarPrendas(";", placardTest);
 
